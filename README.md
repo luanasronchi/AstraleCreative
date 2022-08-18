@@ -17,11 +17,3 @@ Sistema de administração de consultas, procedimentos e agenda para a empresa V
 - [@astralecreative](https://www.instagram.com/astralecreative)
 
 ## Color Reference
-
- Hex                                                                |
- ------------------------------------------------------------------ |
- ![#B7D0D1](https://via.placeholder.com/10/B7D0D1?text=+) #B7D0D1   |
- ![#F2D3CA](https://via.placeholder.com/10/F2D3CA?text=+) #F2D3CA   |
- ![#1B1E2A](https://via.placeholder.com/10/1B1E2A?text=+) #1B1E2A   |
- ![#272938](https://via.placeholder.com/10/272938?text=+) #272938   |
-
