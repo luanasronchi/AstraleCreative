@@ -62,5 +62,17 @@ create table Procedimentos(
     status varchar(15),
     CONSTRAINT fk_id_pet_procedimentos FOREIGN KEY (id_pet) REFERENCES Pets(id),
     CONSTRAINT fk_id_med_procedimentos FOREIGN KEY (id_med) REFERENCES Usuarios(id)
-); 
- 
+);
+
+create table Vacinas(
+    id int primary key auto_increment,
+    nome varchar(50);
+);
+
+create table Pets_Vacinados(
+    id int primary key auto_increment,
+    id_pet int,
+    id_vacina int,
+    CONSTRAINT fk_id_pet_vacina FOREIGN KEY (id_pet) REFERENCES Pets(id),
+    CONSTRAINT fk_id_vacina FOREIGN KEY (id_vacina) REFERENCES Vacinas(id)
+);
