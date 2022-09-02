@@ -1,7 +1,7 @@
 
-# VetLife Web Panel
+# Unic Stetic Center Web Panel
 
-Sistema de administração de consultas, procedimentos e agenda para a empresa VetLife.
+Sistema de administração de consultas, procedimentos e agenda para a empresa Unic Stetic Center.
 
 
 

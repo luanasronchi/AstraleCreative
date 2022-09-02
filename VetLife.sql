@@ -1,6 +1,6 @@
-drop  database if exists VetLife;
-create database VetLife;
-use VetLife;
+drop  database if exists Unic Stetic Center;
+create database Unic Stetic Center;
+use Unic Stetic Center;
 create table Usuarios(
 	id int primary key auto_increment,
     usuario varchar(50) unique,
