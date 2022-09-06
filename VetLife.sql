@@ -1,13 +1,13 @@
 drop  database if exists Unic Stetic Center;
 create database Unic Stetic Center;
 use Unic Stetic Center;
-create table Usuarios(
+create table Medicas(
 	id int primary key auto_increment,
     usuario varchar(50) unique,
     senha varchar(50)
 );
 
-create table Responsaveis(
+create table Pacientes(
 	id int primary key auto_increment,
     nome varchar(50),
 	ddd char(2),
@@ -17,7 +17,6 @@ create table Responsaveis(
     -- Endereço -----------------------
     cidade varchar(30),
     rua varchar(30),
-    bairro varchar(30),
     numero int
 );
 
