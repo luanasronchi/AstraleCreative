@@ -1,6 +1,7 @@
 drop  database if exists UnicSteticCenter;
 create database UnicSteticCenter;
 use UnicSteticCenter;
+
 create table Medicas(
 	id int primary key auto_increment,
     usuario varchar(50) unique,
@@ -34,13 +35,10 @@ create table Procedimentos(
     CONSTRAINT fk_id_medica_procedimentos FOREIGN KEY (id_medica) REFERENCES Medicas(id)
 );
 
-
-
 create table Materiais(
     id int primary key auto_increment,
     nome varchar(80),
-    quantidade int,
-
+    quantidade int
 );
 
 create table Fornecedores(
