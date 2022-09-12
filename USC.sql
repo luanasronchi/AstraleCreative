@@ -11,6 +11,7 @@ create table Medicas(
 create table Pacientes(
 	id int primary key auto_increment,
     nome varchar(40),
+    email varchar(150),
     senha varchar(80),
     idade int,
     cpf char(11) unique,
@@ -33,18 +34,4 @@ create table Procedimentos(
     status varchar(15),
     CONSTRAINT fk_id_paciente_procedimentos FOREIGN KEY (id_paciente) REFERENCES Pacientes(id),
     CONSTRAINT fk_id_medica_procedimentos FOREIGN KEY (id_medica) REFERENCES Medicas(id)
-);
-
-create table Materiais(
-    id int primary key auto_increment,
-    nome varchar(80),
-    quantidade int
-);
-
-create table Fornecedores(
-    id int primary key auto_increment,
-    nome varchar(80),
-    telefone char(11),
-    id_material int,
-    CONSTRAINT fk_id_material_fornecedores FOREIGN KEY (id_material) REFERENCES Materiais(id)
 );
