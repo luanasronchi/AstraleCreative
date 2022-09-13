@@ -1,9 +1,39 @@
+body{
+
+    /* DEFAULT VARIABLES */
+    --notify_color: #B7D0D1;
+    --btn_positive_color: #55C595;
+
+    /* BODY */
+
+    background-color: var(--bg_color);
+    color: var(--text_color);
+    color: var(--text_color);
+
+}
+
+/* THEMES */
+
+.white_theme{
+    --bg_color: #EDECEA;
+    --bg2_color: #FBFAF8;
+    --text_color: #626262;
+}
+
+.black_theme{
+    --bg_color: #272938;
+    --bg2_color: #1B1E2A;
+    --text_color: #FFFFFF;
+}
+
+/* DEFAULT PRESETS */
+
 a{
     text-decoration: none;
     color: #000;
 }
 
-.coluna{
+.column{
     display: flex;
     flex-direction: column;
 }
