@@ -11,29 +11,31 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="body-login">
+    
     <div class="menu-login">
-        <div>
-            <h1>Cadastrar</h1>
-            <div>
-                <input id="input_register_user" type="text" required placeholder="Nome">
-                <input id="input_register_password" type="text" required placeholder="Email">
-                <input id="input_register_password" type="password" required placeholder="Senha">
-                <input id="input_register_password" type="text" required placeholder="CPF">
-                <input id="input_register_password" type="text" required placeholder="Idade">
+        
+            <div>     
+                <section>
+                    <h1 class="position-absolute menu-login-title">Cadastrar</h1>
+                </section>
+                <input class="form-control input_login align-self-center" id="input_register_user" type="text" required placeholder="Nome">
+                <input class="form-control input_login align-self-center" id="input_register_password" type="text" required placeholder="Email">
+                <input class="form-control input_login align-self-center" id="input_register_password" type="password" required placeholder="Senha">
+                <input class="form-control input_login align-self-center" id="input_register_password" type="text" required placeholder="CPF">
+                <input class="form-control input_login align-self-center" id="input_register_password" type="text" required placeholder="Idade">
             </div>
             <div>
-                <input id="input_register_password" type="password" required placeholder="Telefone">
-                <input id="input_register_password" type="password" required placeholder="Cidade">
-                <input id="input_register_password" type="password" required placeholder="Rua">
-                <input id="input_register_password" type="password" required placeholder="Número residêncial">
+                <input class="form-control input_login align-self-center" id="input_register_password" type="text" required placeholder="Telefone">
+                <input class="form-control input_login align-self-center" id="input_register_password" type="text" required placeholder="Cidade">
+                <input class="form-control input_login align-self-center" id="input_register_password" type="text" required placeholder="Rua">
+                <input class="form-control input_login align-self-center" id="input_register_password" type="number" required placeholder="Número residêncial">
 
-                <input type="submit" value="Cadastrar">
-                <h5>Já possui conta? <a href="login.html"><b>Entrar</b></a></h5>
+                <section>
+                    <input class="btn btn-success align-self-center" type="submit" value="Cadastrar" style="width: 100%;">
+                    <h5 class="position-absolute">Já possui conta? <a href="login.html"><b>Entrar</b></a></h5>
+                </section>
             </div>  
-        </div>
-        <div>
-            <img src="logo_branca.png">
-        </div>
+            
     </div>
 </body>
 <script src="script.js"></script>

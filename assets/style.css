@@ -63,9 +63,14 @@ a{
     background-repeat: no-repeat;
     background-size:cover;
     border-radius: 30px;
-    width: 80%;
+    width: 75%;
     height: 65%;
-    justify-content: space-evenly;
+    gap: 10%;
+}
+
+.menu-cadastro{
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .menu-login h1, h6{
@@ -78,6 +83,10 @@ a{
     flex-direction: column;
 }
 
+.menu-cadastro div{
+    width: 25%;
+}
+
 .menu-login input{
     margin-bottom: 7%;
 }
@@ -88,4 +97,8 @@ a{
 
 .menu-login a:hover{
     color: var(--btn_positive_color);
+}
+
+.menu-login-title{
+    margin-top: -5%;
 }
