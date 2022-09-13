@@ -83,10 +83,6 @@ a{
     flex-direction: column;
 }
 
-.menu-cadastro div{
-    width: 25%;
-}
-
 .menu-login input{
     margin-bottom: 7%;
 }
@@ -101,4 +97,11 @@ a{
 
 .menu-login-title{
     margin-top: -5%;
+}
+
+.menu-cadastro img{
+    position: absolute;
+    width: 8%;
+    left: 78%;
+    bottom: 70%;
 }
