@@ -35,3 +35,32 @@ create table Procedimentos(
     CONSTRAINT fk_id_paciente_procedimentos FOREIGN KEY (id_paciente) REFERENCES Pacientes(id),
     CONSTRAINT fk_id_medica_procedimentos FOREIGN KEY (id_medica) REFERENCES Medicas(id)
 );
+
+create table Produtos(
+    id int primary key auto_increment,
+    nome varchar(80),
+    quantidade float,
+    descricao varchar(500),
+);
+
+create table Fornecedores(
+    id int primary key auto_increment,
+    nome varchar(80),
+    telefone char(11),
+    cpf_cnpj varchar(15),
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
