@@ -1,18 +1,17 @@
 body{
 
-    /* DEFAULT VARIABLES */
+/* --------------------------------------------------- */
+/* ----------------- COLORS ----------------- */
+/* --------------------------------------------------- */
     --notify_color: #B7D0D1;
     --btn_positive_color: #55C595;
 
-    /* BODY */
-
-    background-color: var(--bg_color);
-    color: var(--text_color);
-    color: var(--text_color);
 
 }
 
-/* THEMES */
+/* --------------------------------------------------- */
+/* ----------------- THEMES ----------------- */
+/* --------------------------------------------------- */
 
 .white_theme{
     --bg_color: #EDECEA;
@@ -37,7 +36,9 @@ a{
     flex-direction: column;
 }
 
-/* PAGE LOGIN  */
+/* --------------------------------------------------- */
+/* ----------------- PAGE LOGIN ----------------- */
+/* --------------------------------------------------- */
 
 .body-login{
     background: linear-gradient(243.13deg, #253D33 0%, #58937A 100%) no-repeat ;
@@ -68,11 +69,6 @@ a{
     gap: 10%;
 }
 
-.menu-cadastro{
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
 .menu-login h1, h6{
     margin-bottom: 10%;
 }
@@ -97,6 +93,14 @@ a{
 
 .menu-login-title{
     margin-top: -5%;
+}
+/* --------------------------------------------------- */
+/* ----------------- PAGE CADASTRO ----------------- */
+/* --------------------------------------------------- */
+
+.menu-cadastro{
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .menu-cadastro img{
