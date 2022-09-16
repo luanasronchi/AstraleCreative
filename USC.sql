@@ -48,7 +48,8 @@ create table Fornecedores(
     nome varchar(80),
     telefone char(11),
     cpf_cnpj varchar(15),
-
+    id_produto int,
+    CONSTRAINT fk_id_produto_fornecedores FOREIGN KEY (id_produto) REFERENCES Produtos(id)
 );
 
 
