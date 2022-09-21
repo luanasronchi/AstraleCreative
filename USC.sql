@@ -53,13 +53,6 @@ create table Fornecedores(
     CONSTRAINT fk_id_produto_fornecedores FOREIGN KEY (id_produto) REFERENCES Produtos(id)
 );
 
-create table Produtos_Usados(
-	id int primary key auto_increment,
-    id_produto int,
-    id_procedimento int,
-    quantidade int
-);
-
 create table Procedimentos(
 	id int primary key auto_increment,
     id_paciente int,
@@ -67,7 +60,7 @@ create table Procedimentos(
     tipo varchar(30),
     dia date,
     hora time,
-    produtos_usados int,
+    id_produtos_usados int,
     descricao varchar(1500),
     valor float,
     status varchar(15),
@@ -76,18 +69,11 @@ create table Procedimentos(
     CONSTRAINT fk_id_medica_procedimentos FOREIGN KEY (id_medica) REFERENCES (id)
 );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+create table Produtos_Usados(
+	id int primary key auto_increment,
+    id_produto int,
+    id_procedimento int,
+    quantidade int,
+    CONSTRAINT fk_id_produto_produtos_usados FOREIGN KEY (id_produto) REFERENCES Produtos(id),
+    CONSTRAINT fk_id_procedimento_produtos_usados FOREIGN KEY (id_procedimento) REFERENCES Procedimentos(id)
+);
