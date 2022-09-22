@@ -1,125 +1,130 @@
 body{
 
-/* --------------------------------------------------- */
-/* ----------------- COLORS ----------------- */
-/* --------------------------------------------------- */
-    --notify_color: #B7D0D1;
-    --btn_positive_color: #55C595;
-
-
-}
-
-/* --------------------------------------------------- */
-/* ----------------- THEMES ----------------- */
-/* --------------------------------------------------- */
-
-.white_theme{
-    --bg_color: #EDECEA;
-    --bg2_color: #FBFAF8;
-    --text_color: #626262;
-}
-
-.black_theme{
-    --bg_color: #272938;
-    --bg2_color: #1B1E2A;
-    --text_color: #FFFFFF;
-}
-
-/* DEFAULT PRESETS */
-
-a{
-    text-decoration: none;
-}
-
-.column{
-    display: flex;
-    flex-direction: column;
-}
-
-/* --------------------------------------------------- */
-/* ----------------- PAGE LOGIN ----------------- */
-/* --------------------------------------------------- */
-
-.body-login{
-    background: linear-gradient(243.13deg, #253D33 0%, #58937A 100%) no-repeat ;
-    color: #fff;
-    margin: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins', sans-serif;
-    animation: fadein 1.8s;
-}
-
-.menu-login{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url("img/bg_login.png");
-    background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 30px;
-    width: 75%;
-    height: 65%;
-    gap: 10%;
-}
-
-.menu-login h1, h6{
-    margin-bottom: 10%;
-}
-
-.menu-login div{
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-}
-
-.menu-login input{
-    margin-bottom: 7%;
-}
-
-.menu-login a{
-    color: #fff;
-}
-
-.menu-login a:hover{
-    color: var(--btn_positive_color);
-}
-
-.menu-login-title{
-    margin-top: -5%;
-}
-/* --------------------------------------------------- */
-/* ----------------- PAGE CADASTRO ----------------- */
-/* --------------------------------------------------- */
-
-.menu-cadastro{
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.menu-cadastro img{
-    position: absolute;
-    width: 8%;
-    left: 78%;
-    bottom: 70%;
-}
-
-/* --------------------------------------------------- */
-/* ----------------- PAGE PACIENTE ----------------- */
-/* --------------------------------------------------- */
-
-.body-paciente{
-    display: flex;
-}
-
-.panel{
-    background-color: #EDECEA;
-    border-radius: 20px;
-    height: 100%;
-}
+    /* --------------------------------------------------- */
+    /* ----------------- COLORS ----------------- */
+    /* --------------------------------------------------- */
+        --notify_color: #B7D0D1;
+        --btn_positive_color: #55C595;
+    
+    
+    }
+    
+    /* --------------------------------------------------- */
+    /* ----------------- THEMES ----------------- */
+    /* --------------------------------------------------- */
+    
+    .white_theme{
+        --bg_color: #EDECEA;
+        --bg2_color: #FBFAF8;
+        --text_color: #626262;
+    }
+    
+    .black_theme{
+        --bg_color: #272938;
+        --bg2_color: #1B1E2A;
+        --text_color: #FFFFFF;
+    }
+    
+    /* DEFAULT PRESETS */
+    
+    a{
+        text-decoration: none;
+    }
+    
+    .column{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* --------------------------------------------------- */
+    /* ----------------- PAGE LOGIN ----------------- */
+    /* --------------------------------------------------- */
+    
+    .body-login{
+        background: linear-gradient(243.13deg, #253D33 0%, #58937A 100%) no-repeat ;
+        color: #fff;
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+        animation: fadein 1.8s;
+    }
+    
+    .menu-login{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("img/bg_login.png");
+        background-repeat: no-repeat;
+        background-size:cover;
+        border-radius: 30px;
+        width: 75%;
+        height: 65%;
+        gap: 10%;
+    }
+    
+    .menu-login h1, h6{
+        margin-bottom: 10%;
+    }
+    
+    .menu-login div{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu-login input{
+        margin-bottom: 7%;
+    }
+    
+    .menu-login a{
+        color: #fff;
+    }
+    
+    .menu-login a:hover{
+        color: var(--btn_positive_color);
+    }
+    
+    .menu-login-title{
+        margin-top: -5%;
+    }
+    /* --------------------------------------------------- */
+    /* ----------------- PAGE CADASTRO ----------------- */
+    /* --------------------------------------------------- */
+    
+    .menu-cadastro{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .menu-cadastro img{
+        position: absolute;
+        width: 8%;
+        left: 78%;
+        bottom: 70%;
+    }
+    
+    /* --------------------------------------------------- */
+    /* ----------------- PAGE PACIENTE ----------------- */
+    /* --------------------------------------------------- */
+    
+    .body-paciente{
+        display: flex;
+    }
+    
+    .panel{
+        display: flex;
+        padding: 80px;
+        align-items: center;
+        justify-items: center;
+        background-color: #EDECEA;
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+    }
