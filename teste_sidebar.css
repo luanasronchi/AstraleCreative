@@ -104,3 +104,10 @@ nav.open ~ .overlay {
   left: 260px;
   pointer-events: auto;
 }
+.margin-top{
+  margin-top: 5%;
+}
+
+.margin-left{
+  margin-left: 20%;
+}
