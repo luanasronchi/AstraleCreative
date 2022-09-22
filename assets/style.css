@@ -114,17 +114,15 @@ body{
     /* ----------------- PAGE PACIENTE ----------------- */
     /* --------------------------------------------------- */
     
-    .body-paciente{
-        display: flex;
-    }
-    
     .panel{
-        display: flex;
+        margin-left: 20%;
         padding: 80px;
-        align-items: center;
-        justify-items: center;
         background-color: #EDECEA;
         border-radius: 20px;
-        width: 100%;
+        width: 70%;
         height: 100%;
+        color: #626262;
+    }
+    textarea{
+        resize: none;
     }

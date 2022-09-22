@@ -13,8 +13,8 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body class="body-paciente ">
-    <div class="panel margin-top">
+<body class="body-paciente">
+    <div class="panel mt-5">
         <div class="margin-top">
           <h1 class="h1">Pacientes</h1>
               <div>
@@ -47,7 +47,7 @@
                           <input class=" form-control p-1" id="rua" type="text" required>
                         </div>
                         <div class="row mt-2">
-                          <label for="numero">Número da Casa:</label><br>
+                          <label for="numero">Número:</label><br>
                           <input class=" form-control p-1" id="numero" type="text" required>
                         </div>
                         <div class="row mt-2">
@@ -56,14 +56,14 @@
                         </div>
                   </div>
                   <div class="col-md-6 mt-2">
-                      <h2>Observação</h2>
+                      <h3>Observação</h3>
                       <textarea class="form-control" name="obs" id="obs" rows="10"></textarea>
                     
                   </div>
                 </div>
                   <div class="col">
                       <div class="row">
-                          <h2>Histórico</h2>
+                          <h3>Histórico</h3>
                           <textarea class="form-control" rows="10"></textarea>
                       </div>
                   </div>
@@ -73,12 +73,12 @@
 <!-- ------------------------ -->
   <nav>
     <div class="logo">
-      <i class="bx bx-chevron-right bx-sm menu-icon"></i>
+      <i class="bx bx-menu bx-sm menu-icon"></i>
       <span class="logo-name">Unic Stetic Center</span>
     </div>
     <div class="sidebar">
       <div class="logo">
-        <i class="bx bx-chevron-left bx-sm menu-icon"></i>
+        <i class="bx bx-menu bx-sm menu-icon"></i>
         <img src="assets/img/logo_escrito.svg" alt="" width="50%">
       </div>
 
@@ -128,46 +128,21 @@
     </div>
   </nav>
 
-  <section class="overlay"></section>
   <!-- --------------------------------- -->
 
-<!-- <div> 
-    <h2>Histórico</h2>
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Procedimento</th>
-                        <th>Médica</th>
-                        <th>Data</th>
-                        <th>Horário</th>
-                        <th>Telefone</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    
-  </div> -->
 </div>
   <script>
     const navBar = document.querySelector("nav"),
-      menuBtns = document.querySelectorAll(".menu-icon"),
-      overlay = document.querySelector(".overlay");
+      menuBtns = document.querySelectorAll(".menu-icon");
 
     menuBtns.forEach((menuBtn) => {
       menuBtn.addEventListener("click", () => {
-        navBar.classList.toggle("open");
+        navBar.classList.toggle("closed");
       });
     });
 
     overlay.addEventListener("click", () => {
-      navBar.classList.remove("open");
+      navBar.classList.remove("closed");
     });
   </script>
 
