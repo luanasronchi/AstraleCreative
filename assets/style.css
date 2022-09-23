@@ -30,10 +30,96 @@ body{
     a{
         text-decoration: none;
     }
-    
-    .column{
-        display: flex;
-        flex-direction: column;
+
+    /* --------------------------------------------------- */
+    /* ----------------- SIDERBAR ----------------- */
+    /* --------------------------------------------------- */
+
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    }
+    body {
+    min-height: 100%;
+    }
+    nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    }
+    nav .logo {
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+    }
+    .logo .menu-icon {
+    color: var(--text_color);
+    font-size: 24px;
+    margin-right: 14px;
+    cursor: pointer;
+    }
+    .logo .logo-name {
+    color: var(--text_color);
+    font-size: 22px;
+    font-weight: 500;
+    }
+    nav .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    padding: 20px 0;
+    background-color: var(--bg_color);
+    box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    }
+    nav.closed .sidebar {
+    left: -100%;
+    }
+    .sidebar .sidebar-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 16px;
+    }
+    .sidebar-content .list {
+    list-style: none;
+    }
+    .list .nav-link {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    padding: 14px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    }
+    .lists .nav-link:hover {
+    background-color: #3E6856;
+    }
+    .nav-link .icon {
+    margin-right: 14px;
+    font-size: 20px;
+    color: var(--text_color);
+    }
+    .nav-link .link {
+    font-size: 16px;
+    color: var(--text_color);
+    font-weight: 400;
+    margin-left: 3%;
+    }
+    .lists .nav-link:hover .icon,
+    .lists .nav-link:hover .link {
+    color: #fff;
     }
     
     /* --------------------------------------------------- */
@@ -113,16 +199,30 @@ body{
     /* --------------------------------------------------- */
     /* ----------------- PAGE PACIENTE ----------------- */
     /* --------------------------------------------------- */
-    
+    .body-panel{
+        background: var(--bg2_color);
+    }
+
+    .panel input[type=text],input [type=number], select, textarea{
+        background-color: var(--bg2_color) !important;
+        color: var(--text_color) !important;
+        border-color: var(--bg2_color) !important;
+    }
+
+    .svg_sidebar{
+        color: #fff !important;
+    }
+
     .panel{
         margin-left: 20%;
         padding: 80px;
-        background-color: #EDECEA;
+        background-color: var(--bg_color);
         border-radius: 20px;
         width: 70%;
         height: 100%;
-        color: #626262;
+        color: var(--text_color);
     }
+
     textarea{
         resize: none;
     }

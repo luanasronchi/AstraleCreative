@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body class="body-paciente">
+<body class="body-panel black_theme">
     <div class="panel mt-5">
         <div class="margin-top">
           <h1 class="h1">Pacientes</h1>
@@ -67,7 +67,7 @@
     <div class="sidebar">
       <div class="logo">
         <i class="bx bx-menu bx-sm menu-icon"></i>
-        <img src="assets/img/logo_escrito.svg" alt="" width="50%">
+        <img id="sidebar_logo" src="assets/img/sidebar_logo_white.svg" alt="" width="50%">
       </div>
 
       <div class="sidebar-content">
@@ -100,7 +100,7 @@
 
         <div class="bottom-cotent">
           <li class="list">
-            <a href="#" class="nav-link">
+            <a href="#" onclick="CheckTheme();" class="nav-link">
               <i class="bx bx-cog icon"></i>
               <span class="link">Configurações</span>
             </a>
@@ -119,6 +119,7 @@
   <!-- --------------------------------- -->
 
 </div>
+  <script src="assets/script.js"></script>
   <script>
     const navBar = document.querySelector("nav"),
       menuBtns = document.querySelectorAll(".menu-icon");
