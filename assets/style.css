@@ -17,12 +17,14 @@ body{
         --bg_color: #EDECEA;
         --bg2_color: #FBFAF8;
         --text_color: #626262;
+        color-scheme: light;
     }
     
     .black_theme{
         --bg_color: #272938;
         --bg2_color: #1B1E2A;
         --text_color: #FFFFFF;
+        color-scheme: dark;
     }
     
     /* DEFAULT PRESETS */
@@ -203,12 +205,6 @@ body{
         background: var(--bg2_color);
     }
 
-    .panel input[type=text],input [type=number], select, textarea{
-        background-color: var(--bg2_color) !important;
-        color: var(--text_color) !important;
-        border-color: var(--bg2_color) !important;
-    }
-
     .svg_sidebar{
         color: #fff !important;
     }
@@ -221,6 +217,13 @@ body{
         width: 70%;
         height: 100%;
         color: var(--text_color);
+    }
+
+    .panel input[type=text],.panel input [type=number],.panel input [type=date],.panel [type=time],.panel select,.panel textarea,.panel input
+    {
+        background-color: var(--bg2_color) !important;
+        color: var(--text_color) !important;
+        border-color: var(--bg2_color) !important;
     }
 
     textarea{
