@@ -219,7 +219,7 @@ body{
         color: var(--text_color);
     }
 
-    .panel input[type=text],.panel input [type=number],.panel input [type=date],.panel [type=time],.panel select,.panel textarea,.panel input
+    .input_all
     {
         background-color: var(--bg2_color) !important;
         color: var(--text_color) !important;
