@@ -12,23 +12,23 @@
 </head>
 <body class="body-login">
     
-    <form action="assets/insert.php" class="menu-login menu-cadastro">
+    <form action="assets/insert.php" class="menu-login menu-cadastro" method="POST">
         
         <div>     
             <section>
                 <h1 class="position-absolute menu-login-title">Cadastrar</h1>
             </section>
-            <input class="form-control input_login align-self-center" id="nome" type="text" required placeholder="Nome">
-            <input class="form-control input_login align-self-center" id="email" type="text" required placeholder="Email">
-            <input class="form-control input_login align-self-center" id="senha" type="password" required placeholder="Senha">
-            <input class="form-control input_login align-self-center" id="cpf" type="text" required placeholder="CPF">
-            <input class="form-control input_login align-self-center" id="nascimento" type="date" required placeholder="Nascimento">
+            <input class="form-control input_login align-self-center" name="nome" type="text" required placeholder="Nome">
+            <input class="form-control input_login align-self-center" name="email" type="text" required placeholder="Email">
+            <input class="form-control input_login align-self-center" name="senha" type="password" required placeholder="Senha">
+            <input class="form-control input_login align-self-center" name="cpf" type="text" required placeholder="CPF">
+            <input class="form-control input_login align-self-center" name="nascimento" type="date" required placeholder="Nascimento">
         </div>
         <div>
-            <input class="form-control input_login align-self-center" id="telefone" type="text" required placeholder="Telefone">
-            <input class="form-control input_login align-self-center" id="cidade" type="text" required placeholder="Cidade">
-            <input class="form-control input_login align-self-center" id="rua" type="text" required placeholder="Rua">
-            <input class="form-control input_login align-self-center" id="numero_casa" type="number" required placeholder="Número residêncial">
+            <input class="form-control input_login align-self-center" name="telefone" type="text" required placeholder="Telefone">
+            <input class="form-control input_login align-self-center" name="cidade" type="text" required placeholder="Cidade">
+            <input class="form-control input_login align-self-center" name="rua" type="text" required placeholder="Rua">
+            <input class="form-control input_login align-self-center" name="numero_casa" type="number" required placeholder="Número residêncial">
 
             <section>
                 <input class="btn btn-success align-self-center" type="submit" value="Cadastrar" style="width: 100%;">
