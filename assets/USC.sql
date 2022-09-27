@@ -65,8 +65,7 @@ create table Procedimentos(
     valor float,
     status varchar(15),
     CONSTRAINT fk_id_paciente_procedimentos FOREIGN KEY (id_paciente) REFERENCES Pacientes(id),
-    CONSTRAINT fk_id_medica_procedimentos FOREIGN KEY (id_medica) REFERENCES Administradores(id),
-    CONSTRAINT fk_id_medica_procedimentos FOREIGN KEY (id_medica) REFERENCES (id)
+    CONSTRAINT fk_id_medica_procedimentos FOREIGN KEY (id_medica) REFERENCES Administradores(id)
 );
 
 create table Produtos_Usados(
