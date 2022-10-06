@@ -26,10 +26,10 @@ create table Consultas(
 	id int primary key auto_increment,
     id_paciente int,
     id_medica int,
-    tipo varchar(30),
     dia date,
     hora time,
-    descricao varchar(1500),
+    observacao varchar(1500),
+    habil boolean,
     valor float,
     status varchar(15),
     CONSTRAINT fk_id_paciente_consultas FOREIGN KEY (id_paciente) REFERENCES Pacientes(id),
@@ -53,21 +53,6 @@ create table Fornecedores(
     CONSTRAINT fk_id_produto_fornecedores FOREIGN KEY (id_produto) REFERENCES Produtos(id)
 );
 
-create table Procedimentos(
-	id int primary key auto_increment,
-    id_paciente int,
-    id_medica int,  
-    tipo varchar(30),
-    dia date,
-    hora time,
-    id_produtos_usados int,
-    descricao varchar(1500),
-    valor float,
-    status varchar(15),
-    CONSTRAINT fk_id_paciente_procedimentos FOREIGN KEY (id_paciente) REFERENCES Pacientes(id),
-    CONSTRAINT fk_id_medica_procedimentos FOREIGN KEY (id_medica) REFERENCES Administradores(id)
-);
-
 create table Produtos_Usados(
 	id int primary key auto_increment,
     id_produto int,
@@ -76,3 +61,20 @@ create table Produtos_Usados(
     CONSTRAINT fk_id_produto_produtos_usados FOREIGN KEY (id_produto) REFERENCES Produtos(id),
     CONSTRAINT fk_id_procedimento_produtos_usados FOREIGN KEY (id_procedimento) REFERENCES Procedimentos(id)
 );
+
+create table Procedimentos(
+	id int primary key auto_increment,
+    id_paciente int,
+    procedimento varchar(30),
+    id_medica int,
+    dia date,
+    hora time,
+    id_produtos_usados int,
+    observacao varchar(1500),
+    valor float,
+    status varchar(15),
+    CONSTRAINT fk_id_paciente_procedimentos FOREIGN KEY (id_paciente) REFERENCES Pacientes(id),
+    CONSTRAINT fk_id_medica_procedimentos FOREIGN KEY (id_medica) REFERENCES Administradores(id),
+    CONSTRAINT fk_id_produtos_usados_procedimentos FOREIGN KEY (id_produtos_usados) REFERENCES Produtos_Usados(id)
+);
+
