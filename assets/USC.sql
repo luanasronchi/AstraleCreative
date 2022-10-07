@@ -8,6 +8,12 @@ create table Administradores(
     senha varchar(50)
 );
 
+insert into Administradores(usuario, senha) values 
+    ("lara",123),
+    ("aurora",456),
+    ("malu",789),
+    ("recepcao",246);
+
 create table Pacientes(
 	id int primary key auto_increment,
     nome varchar(40),
