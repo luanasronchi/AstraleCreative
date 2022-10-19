@@ -14,7 +14,7 @@
 </head>
 
 <body class="body-panel white_theme">
-    <form action="assets/" method="POST" class="panel mt-5">
+    <form action="assets/func.php" method="POST" class="panel mt-5">
         <div class="margin-top">
           <h1 class="h1">Procedimentos</h1>
               <div>
@@ -23,14 +23,14 @@
                   <div class="col-md-4 p-4">
                     <div class="row mt-2">
                       <label class="p-1" for="cpf">CPF:</label><br>
-                      <input class="form-control p-1 input_all" id="cpf" type="text" required>
+                      <input class="form-control p-1 input_all" id="cpf" name="cpf" type="text" required>
                     </div>
                   </div>
 
                   <div class="col-md-4 p-4">
                     <div class="row mt-2">
                       <label class="p-1" for="type-selector">Procedimento:</label><br>
-                      <select id="type-selector" class="p-1 form-control input_all">
+                      <select id="type-selector" name="procedimento" class="p-1 form-control input_all">
                         <option hidden></option>
                         <option>Harmonização facial</option>
                         <option>Toxina Botulínica</option>
@@ -47,11 +47,11 @@
                   <div class="col-md-4 p-4">
                     <div class="row mt-2">
                       <label class="p-1" for="doc-selector">Médica:</label><br>
-                      <select id="doc-selector" class="p-1 form-control input_all">
+                      <select id="doc-selector" name="medica" class="p-1 form-control input_all">
                         <option hidden></option>
-                        <option id="dr.lara">Dr. Lara</option>
-                        <option id="dr.aurora">Dr. Aurora</option>
-                        <option id="dr.malu">Dr. Malu</option>
+                        <option value="1">Dr. Lara</option>
+                        <option value="2">Dr. Aurora</option>
+                        <option value="3">Dr. Malu</option>
                       </select>
                     </div>
                   </div>
@@ -61,17 +61,17 @@
 
                   <div class="col-md-7 p-4">
                     <h3>Observação</h3>
-                    <textarea class="form-control input_all" name="obs" id="obs" rows="10"></textarea>
+                    <textarea class="form-control input_all" name="descricao" id="obs" rows="10"></textarea>
                   </div>
 
                   <div class="col-md-5 p-4">
                     <h3>Data e Horário</h3>
                     <div class="row">
-                      <input class="form-control p-1 mb-5 input_all" type="time" name="horario" id="horario" required>
+                      <input class="form-control p-1 mb-5 input_all" type="time" name="hora" id="horario" required>
                     </div>
 
                     <div class="row">
-                      <input class="form-control p-1 mb-5 input_all" type="date" name="data" id="data" required>
+                      <input class="form-control p-1 mb-5 input_all" type="date" name="dia" id="data" required>
                     </div>
 
                     <div class="row d-flex justify-content-center">
@@ -81,6 +81,7 @@
                 </div>
               </div>
         </div>
+        <input type="hidden" value="insert_procedimentos" name="func">
       </form>
 
 <!-- ------------------------ -->
