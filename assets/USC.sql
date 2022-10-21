@@ -14,7 +14,7 @@ create table Usuarios(
     rua varchar(80),
     numero_casa int,
     observacao varchar(254),
-    id_adm boolean
+    is_adm boolean
 );
 
 insert into Usuarios(nome, email, senha, telefone, is_adm) values 
@@ -54,14 +54,7 @@ create table Fornecedores(
     CONSTRAINT fk_id_produto_fornecedores FOREIGN KEY (id_produto) REFERENCES Produtos(id)
 );
 
-create table Produtos_Usados(
-	id int primary key auto_increment,
-    id_produto int,
-    id_procedimento int,
-    quantidade int,
-    CONSTRAINT fk_id_produto_produtos_usados FOREIGN KEY (id_produto) REFERENCES Produtos(id),
-    CONSTRAINT fk_id_procedimento_produtos_usados FOREIGN KEY (id_procedimento) REFERENCES Procedimentos(id)
-);
+
 
 create table Procedimentos(
 	id int primary key auto_increment,
@@ -75,7 +68,5 @@ create table Procedimentos(
     valor float,
     status varchar(15),
     CONSTRAINT fk_id_paciente_procedimentos FOREIGN KEY (id_paciente) REFERENCES Usuarios(id),
-    CONSTRAINT fk_id_medica_procedimentos FOREIGN KEY (id_medica) REFERENCES Usuarios(id),
-    CONSTRAINT fk_id_produtos_usados_procedimentos FOREIGN KEY (id_produtos_usados) REFERENCES Produtos_Usados(id)
+    CONSTRAINT fk_id_medica_procedimentos FOREIGN KEY (id_medica) REFERENCES Usuarios(id)
 );
-

@@ -26,9 +26,9 @@
             session_start();
 
             //insere informações na sessão.
-            $_SESSION['pk_usuario'] = $resultado['pk_usuario'];
-            $_SESSION['senha_usuario'] = $resultado['senha_usuario'];
-            $_SESSION['is_adm_usuario'] = $resultado['is_adm_usuario'];
+            $_SESSION['id'] = $resultado['id'];
+            $_SESSION['senha'] = $resultado['senha'];
+            $_SESSION['is_adm'] = $resultado['is_adm'];
             $_SESSION['loggedin'] = true;
 
             //redireciona para a pagina informada.
