@@ -1,6 +1,12 @@
 <?php
     include("conecta.php");
     $func = $_POST["func"];
+    $funcAlt = $_POST["funcAlt"];
+
+    if($funcAlt=="logout"){
+      session_destroy();
+      header("location:../login.html");
+    }
 
     if($func=="login"){
         $email = $_POST["email"];

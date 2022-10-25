@@ -15,19 +15,19 @@
 
 <body class="body-panel white_theme">
     <div class="panel mt-5">
-        <div class="margin-top">
-          <h1 class="h1">Agenda</h1>
-              <div class="row">
-                <div class="col-md-2">Nome</div>
-                <div class="col-md-2">Médica</div>
-                <div class="col-md-2">Procedimento</div>
-                <div class="col-md-1">Data</div>
-                <div class="col-md-1">Hora</div>
-                <div class="col-md-2">Telefone</div>
-                <div class="col-md-2">Status</div>
-              </div>   
-        </div>
+      <div class="margin-top">
+        <h1 class="h1">Agenda</h1>
+            <div class="row">
+              <div class="col-md-2">Nome</div>
+              <div class="col-md-2">Médica</div>
+              <div class="col-md-2">Procedimento</div>
+              <div class="col-md-1">Data</div>
+              <div class="col-md-1">Hora</div>
+              <div class="col-md-2">Telefone</div>
+              <div class="col-md-2">Status</div>
+            </div>   
       </div>
+    </div>
 
 <!-- ------------------------ -->
 
@@ -84,10 +84,14 @@
           </a>
         </li>
         <li class="list">
-          <a href="login.html" class="nav-link">
+          <form id="logout" action="assets/func.php" method="POST">
+          <input type="hidden" value="logout" name="funcAlt">
+          <a class="nav-link" href="#" onclick="document.getElementById('logout').submit()">
             <i class="bx bx-log-out icon"></i>
+            <input style="display:none" type="submit" class="link" value="Logout">
             <span class="link">Logout</span>
           </a>
+          </form>
         </li>
       </div>
     </div>
