@@ -108,7 +108,7 @@
       $dia = $_POST["dia"];
       $descricao = $_POST["descricao"];
      
-      $id_paciente = $pdo->query("SELECT id FROM Pacientes WHERE cpf='$cpf'")->fetch();
+      $id_paciente = $pdo->query("SELECT id FROM usuarios WHERE cpf='$cpf'")->fetch();
       $id_string = $id_paciente["0"];
   
   
@@ -130,6 +130,28 @@
       echo $descricao = $_POST["descricao"];
       
       /* echo pag_up('../consultas.html'); */
+    }
+
+    if($func=="schedule"){
+      include("conecta.php");
+
+    //comando sql.
+    $comando = $pdo->prepare("SELECT dia, hora, FROM procedimentos");
+
+    //executa a consulta no banco de dados.
+    $comando->execute();
+
+    //Verifica se existe pelo menos um registro na tabela.
+    if($comando->rowCount() >= 1)
+    {
+        //o fetch() transforma o retorno em um vetor (Use para um registro).
+        $informacoes_usuario = $comando->fetch();
+    }else{
+        echo("Não há usuários cadastrados.");
+    }
+
+    unset($comando);
+    unset($pdo);
     }
 
 ?>

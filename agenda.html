@@ -1,6 +1,14 @@
+<?php
+session_start();
+// Verifique se o usuário está logado, se não, redirecione-o para uma página de login
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.html");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,15 +25,34 @@
     <div class="panel mt-5">
       <div class="margin-top">
         <h1 class="h1">Agenda</h1>
-            <div class="row">
-              <div class="col-md-2">Nome</div>
-              <div class="col-md-2">Médica</div>
-              <div class="col-md-2">Procedimento</div>
-              <div class="col-md-1">Data</div>
-              <div class="col-md-1">Hora</div>
-              <div class="col-md-2">Telefone</div>
-              <div class="col-md-2">Status</div>
-            </div>   
+            <form action="func.php" method="POST">
+              <table class="row">
+              <thead>
+                <tr>
+                  <th class="col-md-1">Dia</th>
+                  <th class="col-md-1">Hora</th>
+                </tr>
+              </thead>
+              <tbody>
+                <input type="hidden" value="schedule" name="func">
+              <?php
+                include("func.php");
+                //verifica se a variável tem os valores da tabela.
+                if (!empty($lista_usuarios)) {
+                    //seleciona linha por linha.
+                    foreach ($lista_usuarios as $linha) { ?>
+                        <tr>
+
+                            <td> <?php echo $linha['dia']; ?></td>
+                            <td> <?php echo $linha['hora']; ?></td>
+
+                        </tr>
+                <?php }
+                }
+                ?>
+              </tbody>
+              </table>   
+            </form>
       </div>
     </div>
 
