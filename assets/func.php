@@ -4,7 +4,7 @@
 
     if($func=="login"){
         $email = $_POST["email"];
-        $cpf = $_POST["cpf"];
+        $cpf = $_POST["email"];
         $password = $_POST["password"];
     
         $comando = $pdo->prepare("SELECT id, senha, is_adm FROM Usuarios WHERE email = :email");
@@ -21,7 +21,7 @@
         $resultado = $comando->fetch();
 
         //Comparar senha informada com a senha armazenado no banco de dados.
-        if ($resultado['senha_usuario'] == MD5($set_senha)) {
+        if ($resultado['senha'] == $password) {
             //inicia uma sessão.
             session_start();
 
@@ -32,7 +32,7 @@
             $_SESSION['loggedin'] = true;
 
             //redireciona para a pagina informada.
-            header("Location:pagina_inicial.php");
+            header("Location:../pacientes.html");
         } else {
             echo ("Email ou Senha Inválida!");
         }
