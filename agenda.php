@@ -15,6 +15,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     $resultado_dia = $pdo->query($comando_dia)->fetchAll(); 
     $count = count($resultado_dia);
     
+
     $i_procedimentos = $count-1;        
     echo $i_procedimentos;
 ?>
@@ -54,15 +55,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     // echo "<br>";
                     // echo $i_user;
                     while ($i_procedimentos > 0) {
-                        $result_hora = $resultado_hora[$i_procedimentos];
-                        $result_hora = $result_hora[0];
-                        $result_dia = $resultado_dia[$i_procedimentos];
-                        $result_dia = $result_dia[0];
-
+                        
+                        echo $result_dia;
+                        echo $result_hora;
+/* 
                             echo("<tr>");
                             echo("<td>$result_dia</td>");
                             echo("<td>$result_hora</td>");
-                            echo("<tr>");
+                            echo("<tr>"); */
 
                         
                         $i_procedimentos = $i_procedimentos-1;
