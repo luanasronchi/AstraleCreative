@@ -7,6 +7,18 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 }
 ?>
 
+<?php 
+    include("php/conecta.php");
+    $comando_hora ="SELECT hora FROM procedimentos";
+    $comando_dia ="SELECT dia FROM procedimentos";
+    $resultado_hora = $pdo->query($comando_hora)->fetchAll(); 
+    $resultado_dia = $pdo->query($comando_dia)->fetchAll(); 
+    $count = count($resultado_dia);
+    
+    $i_procedimentos = $count-1;        
+    echo $i_procedimentos;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +37,41 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class="panel mt-5">
       <div class="margin-top">
         <h1 class="h1">Agenda</h1>
+        <table class="table table-striped table-bordered table-condensed table-hover">
+
+                <thead>
+
+                    <tr>
+                        <td>Dia</td>
+                        <td>Hora</td>
+                    </tr>
+                
+                </thead>
+                        
+                <tbody>
+                    <?php 
+                    // print_r ($resultado_user);
+                    // echo "<br>";
+                    // echo $i_user;
+                    while ($i_procedimentos > 0) {
+                        $result_hora = $resultado_hora[$i_procedimentos];
+                        $result_hora = $result_hora[0];
+                        $result_dia = $resultado_dia[$i_procedimentos];
+                        $result_dia = $result_dia[0];
+
+                            echo("<tr>");
+                            echo("<td>$result_dia</td>");
+                            echo("<td>$result_hora</td>");
+                            echo("<tr>");
+
+                        
+                        $i_procedimentos = $i_procedimentos-1;
+                    };
+
+                    ?>
+                </tbody>
+                
+            </table>
             <form action="func.php" method="POST">
               <table class="row">
               <thead>
@@ -34,22 +81,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </tr>
               </thead>
               <tbody>
-                <input type="hidden" value="schedule" name="func">
               <?php
-                include("func.php");
+                include("php/schedule.php");
                 //verifica se a variável tem os valores da tabela.
                 if (!empty($lista_usuarios)) {
                     //seleciona linha por linha.
                     foreach ($lista_usuarios as $linha) { ?>
-                        <tr>
-
-                            <td> <?php echo $linha['dia']; ?></td>
-                            <td> <?php echo $linha['hora']; ?></td>
-
-                        </tr>
-                <?php }
-                }
-                ?>
+                      <tr>
+                        <td> <?php echo $linha['dia']; ?></td>
+                        <td> <?php echo $linha['hora']; ?></td>
+                      </tr>
+                      <?php }
+            }
+            ?>
               </tbody>
               </table>   
             </form>
@@ -96,7 +140,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           </a>
         </li>
         <li class="list">
-          <a href="agenda.html" class="nav-link">
+          <a href="agenda.php" class="nav-link">
             <i class="bx bx-time-five icon"></i>
             <span class="link">Agenda</span>
           </a>

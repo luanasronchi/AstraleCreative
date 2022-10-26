@@ -10,10 +10,4 @@
     {
         echo("ERRO NA CONEXÃO: <br>".$erro->getMessage());
     }
-
-    function pag_up($link){
-        header("location: $link");
-    }
-
-
 ?>
