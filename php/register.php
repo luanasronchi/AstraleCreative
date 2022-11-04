@@ -11,7 +11,7 @@ include("conecta.php");
     $rua = $_POST["rua"];
     $numero_casa = $_POST["numero_casa"];
 
-    $comando = $pdo -> prepare("INSERT INTO Pacientes(nome, email, senha, nascimento, cpf, telefone, cidade, rua, numero_casa, observacao) VALUES(:nome, :email, :senha, :nascimento, :cpf, :telefone, :cidade, :rua, :numero_casa, :observacao)");  // Prepara o Comando de inserção
+    $comando = $pdo -> prepare("INSERT INTO usuarios(nome, email, senha, nascimento, cpf, telefone, cidade, rua, numero_casa, observacao) VALUES(:nome, :email, :senha, :nascimento, :cpf, :telefone, :cidade, :rua, :numero_casa, :observacao)");  // Prepara o Comando de inserção
     $comando->bindValue(":nome",$nome);                                         // Seleciona o dado que será inserido
     $comando->bindValue(":email",$email);                                        // Seleciona o dado que será inserido
     $comando->bindValue(":senha",$senha);                                        // Seleciona o dado que será inserido
