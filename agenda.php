@@ -51,17 +51,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <?php
             include("php/schedule.php");
 
-            //verifica se a variável tem os valores da tabela.
+             //verifica se a variável tem os valores da tabela.
             if (!empty($informacoes_agenda)) {
                 //seleciona linha por linha.
                 foreach ($informacoes_agenda as $linha) { ?>
                     <tr>
-                        <td> <?php echo $linha['id']; ?></td>
-                        <td> <?php echo $linha['id_medica']; ?></td>
+                        <td> <?php echo $linha[i]['id']; ?></td>
+                        <td> <?php echo $linha[i+1]['id_medica']; ?></td>
                         <td> <?php echo $linha['procedimento']; ?></td>
                     </tr>
             <?php }
-            }
+            } 
             ?>
 
 
