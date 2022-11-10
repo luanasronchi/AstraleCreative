@@ -136,8 +136,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           </a>
         </li>
         <li class="list">
-          <form id="logout" action="assets/func.php" method="POST">
-          <input type="hidden" value="logout" name="funcAlt">
+          <form id="logout" action="php/logout.php" method="POST">
           <a class="nav-link" href="#" onclick="document.getElementById('logout').submit()">
             <i class="bx bx-log-out icon"></i>
             <input style="display:none" type="submit" class="link" value="Logout">
