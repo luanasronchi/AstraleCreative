@@ -42,8 +42,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <table class="table table-striped table-bordered table-condensed table-hover">
           <thead>
               <tr>
-                  <td>Dia</td>
-                  <td>Hora</td>
+                <td>Média</td>
+                <td>Paciente</td>
+                <td>Telefone</td>
+                <td>Data</td>
+                <td>Hora</td>
+                <td>Tipo</td>
+                <td>Complemento</td>
+                <td>Status</td>
               </tr>
 
 
@@ -57,9 +63,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 //seleciona linha por linha.
                 foreach ($informacoes_agenda as $linha) { ?>
                     <tr>
-                        <td> <?php echo $linha[i]['id']; ?></td>
-                        <td> <?php echo $linha[i+1]['id_medica']; ?></td>
-                        <td> <?php echo $linha['procedimento']; ?></td>
+                        <td> <?php echo $linha['nomeMed']; ?></td>
+                        <td> <?php echo $linha['nomePac']; ?></td>
+                        <td> <?php echo $linha['telefone']; ?></td>
+                        <td> <?php echo $linha['dia']; ?></td>
+                        <td> <?php echo $linha['hora']; ?></td>
+                        <td> <?php echo $linha['tipo']; ?></td>
+                        <td> <?php echo $linha['complemento']; ?></td>
+                        <td> <?php echo $linha['status']; ?></td>
                     </tr>
             <?php }
             } 
