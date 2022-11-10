@@ -39,6 +39,43 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class="panel mt-5">
       <div class="margin-top">
         <h1 class="h1">Agenda</h1>
+        <br>
+        <h3 class="h3">Procedimentos</h3>
+        <table class="table   table-bordered table-condensed table-hover">
+          <thead>
+              <tr>
+                <td>Média</td>
+                <td>Paciente</td>
+                <td>Telefone</td>
+                <td>Data</td>
+                <td>Hora</td>
+                <td>Complemento</td>
+                <td>Status</td>
+              </tr>
+          </thead>
+          <tbody>
+            <?php
+              include("php/schedule.php");
+              //verifica se a variável tem os valores da tabela.
+              if (!empty($agenda_procedimento)) {
+                  //seleciona linha por linha.
+                  foreach ($agenda_procedimento as $linha) { ?>
+                    <tr>
+                        <td> <?php echo $linha['nomeMed']; ?></td>
+                        <td> <?php echo $linha['nomePac']; ?></td>
+                        <td> <?php echo $linha['telefone']; ?></td>
+                        <td> <?php echo $linha['dia']; ?></td>
+                        <td> <?php echo $linha['hora']; ?></td>
+                        <td> <?php echo $linha['complemento']; ?></td>
+                        <td> <?php echo $linha['status']; ?></td>
+                    </tr>
+              <?php }
+              } 
+            ?>
+          </tbody>
+        </table>
+
+        <h3 class="h3">Consultas</h3>
         <table class="table table-striped table-bordered table-condensed table-hover">
           <thead>
               <tr>
@@ -47,43 +84,31 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <td>Telefone</td>
                 <td>Data</td>
                 <td>Hora</td>
-                <td>Tipo</td>
                 <td>Complemento</td>
                 <td>Status</td>
               </tr>
-
-
-
-
-<?php
-            include("php/schedule.php");
-
-             //verifica se a variável tem os valores da tabela.
-            if (!empty($informacoes_agenda)) {
-                //seleciona linha por linha.
-                foreach ($informacoes_agenda as $linha) { ?>
+            
+          </thead>
+          <tbody>
+          <?php
+              include("php/schedule.php");
+              //verifica se a variável tem os valores da tabela.
+              if (!empty($agenda_consulta)) {
+                  //seleciona linha por linha.
+                  foreach ($agenda_consulta as $linha) { ?>
                     <tr>
                         <td> <?php echo $linha['nomeMed']; ?></td>
                         <td> <?php echo $linha['nomePac']; ?></td>
                         <td> <?php echo $linha['telefone']; ?></td>
                         <td> <?php echo $linha['dia']; ?></td>
                         <td> <?php echo $linha['hora']; ?></td>
-                        <td> <?php echo $linha['tipo']; ?></td>
                         <td> <?php echo $linha['complemento']; ?></td>
                         <td> <?php echo $linha['status']; ?></td>
                     </tr>
-            <?php }
-            } 
+              <?php }
+              } 
             ?>
-
-
-
-
-          </thead>
-                  
-          <tbody>
-
-          </tbody>  
+          </tbody>
         </table>
       </div>
     </div>

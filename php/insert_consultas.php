@@ -6,7 +6,7 @@
     $dia = $_POST["dia"];
     $descricao = $_POST["descricao"];
 
-    $id_paciente = $pdo->query("SELECT id FROM Pacientes WHERE cpf='$cpf'")->fetch();
+    $id_paciente = $pdo->query("SELECT id FROM usuarios WHERE cpf='$cpf'")->fetch();
     $id_string = $id_paciente["0"];
 
     $comando = $pdo -> prepare("INSERT INTO Consultas(id_paciente, id_medica, dia, hora, observacao) VALUES(:paciente, :medica, :dia, :hora, :observacao)");  // Prepara o Comando de inserção
