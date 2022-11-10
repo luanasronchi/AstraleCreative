@@ -1,19 +1,28 @@
-function CheckTheme(){
-    if (document.body.classList.contains('white_theme')){
-        ChangeTheme('black_theme')} 
-    else ChangeTheme('white_theme');
+const changeThemeBtn = document.querySelector("#change-theme");
+
+// Toggle dark mode
+function toggleDarkMode() {
+  document.body.classList.toggle("black_theme");
 }
 
-function ChangeTheme(theme){
-    if (theme == 'white_theme'){
-        document.getElementById("sidebar_logo").src = "assets/img/sidebar_logo_black.svg"
-    }
-    else {
-        document.getElementById("sidebar_logo").src = "assets/img/sidebar_logo_white.svg"
-    }
-    document.body.classList.remove('white_theme'); 
-    document.body.classList.remove('black_theme'); 
+// Load light or dark mode
+function loadTheme() {
+  const darkMode = localStorage.getItem("black_theme");
 
-    document.body.classList.add(theme);
-    
+  if (darkMode) {
+    toggleDarkMode();
+  }
 }
+
+loadTheme();
+
+changeThemeBtn.addEventListener("change", function () {
+  toggleDarkMode();
+
+  // Save or remove dark mode from localStorage
+  localStorage.removeItem("black_theme");
+
+  if (document.body.classList.contains("black_theme")) {
+    localStorage.setItem("black_theme", 1);
+  }
+});

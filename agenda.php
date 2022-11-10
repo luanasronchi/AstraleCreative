@@ -32,6 +32,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   <title>Unic Stetic Center - Agenda </title>
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/script.js" defer></script>
 </head>
 
 <body class="body-panel white_theme">
@@ -128,7 +129,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           <a href="#" class="nav-link">
             <i class="icon">
             <div class="form-check form-switch">
-              <input class="form-check-input" onclick="CheckTheme();" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+             <input class="form-check-input" name="change-theme" id="change-theme" type="checkbox" >
             </div>
             </i>
             <span class="link">Tema</span>
