@@ -1,3 +1,21 @@
+<?php
+  session_start();
+  include("php/conecta.php");
+  error_reporting(0);
+  ini_set('display_errors',0);
+
+  $nome_paciente = $_SESSION['$nome_paciente'];
+  $nascimento_paciente = $_SESSION['$nascimento_paciente'];
+  $telefone_paciente = $_SESSION['$telefone_paciente'];
+  $cidade_paciente = $_SESSION['$cidade_paciente'];
+  $rua_paciente = $_SESSION['$rua_paciente'];
+  $numero_casa_paciente = $_SESSION['$numero_casa_paciente'];
+  $email_paciente = $_SESSION['$email_paciente'];
+  $cpf = $_SESSION['$cpf'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,9 +38,9 @@
           
             <nav class="navbar justify-content-between">
                 <h1 class="h1">Pacientes</h1> 
-                <form class=" d-flex flex-row">
-                  <input class="form-control btn-outline me-1 input_all" type="search" placeholder="CPF" aria-label="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                <form action="php/cpf_search.php" method="POST" class="d-flex flex-row">
+                  <input name="cpf" class="form-control btn-outline me-1 input_all" type="search" placeholder="CPF" aria-label="Search">
+                  <input type="submit" class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Buscar">
                 </form>
               </nav>
           <div>
@@ -30,37 +48,37 @@
                   <div class="col-md-3 p-4">
                     <div class="row mt-2">
                       <label class="p-1" for="nome">Nome:</label><br>
-                      <input class=" form-control p-1 input_all" id="nome" type="text" required>
+                      <input class=" form-control p-1 input_all" value= <?php echo '"'.$nome_paciente.'"'; ?> id="nome" type="text" required>
                     </div>
                     <div class="row mt-2">
                       <label class="p-1" for="nascimento">Nascimento:</label><br>
-                      <input class=" form-control p-1 input_all" id="nascimento" type="date" required>
+                      <input class=" form-control p-1 input_all" value= <?php echo '"'.$nascimento_paciente.'"'; ?> id="nascimento" type="date" required>
                     </div>
                     <div class="row mt-2">
                       <label class="p-1" for="cpf">CPF:</label><br>
-                      <input class=" form-control p-1 input_all" id="cpf" type="text" required>
+                      <input class=" form-control p-1 input_all" value= <?php echo '"'.$cpf.'"'; ?> id="cpf" type="text" required>
                     </div>
                     <div class="row mt-2">
                       <label class="p-1" for="telefone">Telefone:</label><br>
-                      <input class=" form-control p-1 input_all" id="telefone" type="text" required>
+                      <input class=" form-control p-1 input_all" value= <?php echo '"'.$telefone_paciente.'"'; ?> id="telefone" type="text" required>
                     </div>
                   </div>
                   <div class="col-md-3 p-4">
                       <div class="row mt-2">
                           <label class="p-1" for="cidade">Cidade:</label><br>
-                          <input class=" form-control p-1 input_all" id="cidade" type="text" required>
+                          <input class=" form-control p-1 input_all" value= <?php echo '"'.$cidade_paciente.'"'; ?> id="cidade" type="text" required>
                         </div>
                         <div class="row mt-2">
                           <label class="p-1" for="rua">Rua:</label><br>
-                          <input class=" form-control p-1 input_all" id="rua" type="text" required>
+                          <input class=" form-control p-1 input_all" value= <?php echo '"'.$rua_paciente.'"'; ?> id="rua" type="text" required>
                         </div>
                         <div class="row mt-2">
                           <label class="p-1" for="numero">Número:</label><br>
-                          <input class=" form-control p-1 input_all" id="numero" type="text" required>
+                          <input class=" form-control p-1 input_all" value= <?php echo '"'.$numero_casa_paciente.'"'; ?> id="numero" type="text" required>
                         </div>
                         <div class="row mt-2">
                           <label class="p-1" for="email">E-mail:</label><br>
-                          <input class=" form-control p-1 input_all" id="email" type="text" required>
+                          <input class=" form-control p-1 input_all" value= <?php echo '"'.$email_paciente.'"'; ?> id="email" type="text" required>
                         </div>
                   </div>
                   <div class="col-md-6 my-auto">
