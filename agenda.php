@@ -7,19 +7,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 }
 ?>
 
-<?php 
-    include("php/conecta.php");
-    $comando_hora ="SELECT hora FROM procedimentos";
-    $comando_dia ="SELECT dia FROM procedimentos";
-    $resultado_hora = $pdo->query($comando_hora)->fetchAll(); 
-    $resultado_dia = $pdo->query($comando_dia)->fetchAll(); 
-    $count = count($resultado_dia);
-    
-
-    $i_procedimentos = $count-1;        
-    echo $i_procedimentos;
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,7 +116,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class="sidebar-content">
       <ul class="p-1 lists">
         <li class="list">
-          <a href="pacientes.html" class="nav-link">
+          <a href="pacientes.php" class="nav-link">
             <i class="bx bx-home icon"></i>
             <span class="link">Pacientes</span>
           </a>
@@ -146,12 +133,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
               <span class="link">Procedimentos</span>
             </a>
         </li>
-        <li class="list">
-          <a href="#" class="nav-link">
-            <i class="bx bx-box icon"></i>
-            <span class="link">Estoque</span>
-          </a>
-        </li>
+        
         <li class="list">
           <a href="agenda.php" class="nav-link">
             <i class="bx bx-time-five icon"></i>

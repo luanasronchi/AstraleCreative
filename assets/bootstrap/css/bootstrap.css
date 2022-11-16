@@ -1738,7 +1738,7 @@ progress {
   }
 }
 .table {
-  --bs-table-color: var(--bs-body-color);
+
   --bs-table-bg: transparent;
   --bs-table-border-color: var(--bs-border-color);
   --bs-table-accent-bg: transparent;

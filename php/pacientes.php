@@ -1,4 +1,0 @@
-<?php
-    include("conecta.php");
-  
-?>

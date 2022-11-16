@@ -30,7 +30,7 @@
             $_SESSION['loggedin'] = true;
 
             //redireciona para a pagina informada.
-            header("Location:../pacientes.html");
+            header("Location:../pacientes.php");
         } else {
             echo ("Email ou Senha Inválida!");
         }

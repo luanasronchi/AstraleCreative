@@ -48,37 +48,37 @@
                   <div class="col-md-3 p-4">
                     <div class="row mt-2">
                       <label class="p-1" for="nome">Nome:</label><br>
-                      <input class=" form-control p-1 input_all" value= <?php echo '"'.$nome_paciente.'"'; ?> id="nome" type="text" required>
+                      <input class=" form-control p-1 input_all" value= <?php echo '"'.$nome_paciente.'"'; ?> id="nome" type="text" required readonly>
                     </div>
                     <div class="row mt-2">
                       <label class="p-1" for="nascimento">Nascimento:</label><br>
-                      <input class=" form-control p-1 input_all" value= <?php echo '"'.$nascimento_paciente.'"'; ?> id="nascimento" type="date" required>
+                      <input class=" form-control p-1 input_all" value= <?php echo '"'.$nascimento_paciente.'"'; ?> id="nascimento" type="date" required readonly>
                     </div>
                     <div class="row mt-2">
                       <label class="p-1" for="cpf">CPF:</label><br>
-                      <input class=" form-control p-1 input_all" value= <?php echo '"'.$cpf.'"'; ?> id="cpf" type="text" required>
+                      <input class=" form-control p-1 input_all" value= <?php echo '"'.$cpf.'"'; ?> id="cpf" type="text" required readonly>
                     </div>
                     <div class="row mt-2">
                       <label class="p-1" for="telefone">Telefone:</label><br>
-                      <input class=" form-control p-1 input_all" value= <?php echo '"'.$telefone_paciente.'"'; ?> id="telefone" type="text" required>
+                      <input class=" form-control p-1 input_all" value= <?php echo '"'.$telefone_paciente.'"'; ?> id="telefone" type="text" required readonly>
                     </div>
                   </div>
                   <div class="col-md-3 p-4">
                       <div class="row mt-2">
                           <label class="p-1" for="cidade">Cidade:</label><br>
-                          <input class=" form-control p-1 input_all" value= <?php echo '"'.$cidade_paciente.'"'; ?> id="cidade" type="text" required>
+                          <input class=" form-control p-1 input_all" value= <?php echo '"'.$cidade_paciente.'"'; ?> id="cidade" type="text" required readonly>
                         </div>
                         <div class="row mt-2">
                           <label class="p-1" for="rua">Rua:</label><br>
-                          <input class=" form-control p-1 input_all" value= <?php echo '"'.$rua_paciente.'"'; ?> id="rua" type="text" required>
+                          <input class=" form-control p-1 input_all" value= <?php echo '"'.$rua_paciente.'"'; ?> id="rua" type="text" required readonly>
                         </div>
                         <div class="row mt-2">
                           <label class="p-1" for="numero">Número:</label><br>
-                          <input class=" form-control p-1 input_all" value= <?php echo '"'.$numero_casa_paciente.'"'; ?> id="numero" type="text" required>
+                          <input class=" form-control p-1 input_all" value= <?php echo '"'.$numero_casa_paciente.'"'; ?> id="numero" type="text" required readonly>
                         </div>
                         <div class="row mt-2">
                           <label class="p-1" for="email">E-mail:</label><br>
-                          <input class=" form-control p-1 input_all" value= <?php echo '"'.$email_paciente.'"'; ?> id="email" type="text" required>
+                          <input class=" form-control p-1 input_all" value= <?php echo '"'.$email_paciente.'"'; ?> id="email" type="text" required readonly>
                         </div>
                   </div>
                   <div class="col-md-6 my-auto">
@@ -111,7 +111,7 @@
     <div class="sidebar-content">
       <ul class="p-1 lists">
         <li class="list">
-          <a href="pacientes.html" class="nav-link">
+          <a href="pacientes.php" class="nav-link">
             <i class="bx bx-home icon"></i>
             <span class="link">Pacientes</span>
           </a>
@@ -128,12 +128,7 @@
               <span class="link">Procedimentos</span>
             </a>
         </li>
-        <li class="list">
-          <a href="#" class="nav-link">
-            <i class="bx bx-box icon"></i>
-            <span class="link">Estoque</span>
-          </a>
-        </li>
+        
         <li class="list">
           <a href="agenda.php" class="nav-link">
             <i class="bx bx-time-five icon"></i>

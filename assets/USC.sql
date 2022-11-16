@@ -66,7 +66,7 @@ create table Procedimentos(
     id_produtos_usados int,
     observacao varchar(1500),
     valor float,
-    status varchar(15),
+    status varchar(15) DEFAULT 'Pendente',
     CONSTRAINT fk_id_paciente_procedimentos FOREIGN KEY (id_paciente) REFERENCES Usuarios(id),
     CONSTRAINT fk_id_medica_procedimentos FOREIGN KEY (id_medica) REFERENCES Usuarios(id)
 );
