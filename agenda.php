@@ -1,10 +1,11 @@
 <?php
-session_start();
-// Verifique se o usuário está logado, se não, redirecione-o para uma página de login
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.html");
-    exit;
-}
+  session_start();
+  include("php/conecta.php");
+  error_reporting(0);
+  ini_set('display_errors',0);
+
+  $is_adm = $_SESSION['$is_adm'];
+
 ?>
 
 <!DOCTYPE html>
@@ -27,8 +28,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       <div class="margin-top">
         <h1 class="h1">Agenda</h1>
         <br>
-        <h3 class="h3">Procedimentos</h3>
-        <table class="table   table-bordered table-condensed table-hover">
+        <h3 class="h3"><?php echo $is_adm[0]; ?></h3>
+        <table class="table table-bordered table-condensed table-hover">
           <thead>
               <tr>
                 <td>Média</td>
@@ -63,7 +64,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </table>
 
         <h3 class="h3">Consultas</h3>
-        <table class="table table-striped table-bordered table-condensed table-hover">
+        <table class="table table-bordered table-condensed table-hover">
           <thead>
               <tr>
                 <td>Média</td>

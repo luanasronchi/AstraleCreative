@@ -2,7 +2,6 @@
     include("conecta.php");
 
     $email = $_POST["email"];
-    $cpf = $_POST["email"];
     $password = $_POST["password"];
 
     $comando = $pdo->prepare("SELECT id, senha, is_adm FROM Usuarios WHERE email = :email");
