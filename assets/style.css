@@ -203,6 +203,8 @@ body{
     /* --------------------------------------------------- */
     .body-panel{
         background: var(--bg2_color);
+        display: flex;
+        justify-content: center;
     }
 
     .svg_sidebar{
@@ -210,7 +212,6 @@ body{
     }
 
     .panel{
-        margin-left: 20%;
         padding: 80px;
         background-color: var(--bg_color);
         border-radius: 20px;
