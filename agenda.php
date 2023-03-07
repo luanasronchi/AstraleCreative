@@ -29,51 +29,17 @@
         <h1 class="h1">Agenda</h1>
         <br>
         <h3 class="h3"><?php echo $is_adm[0]; ?></h3>
-        <table class="table table-bordered table-condensed table-hover">
-          <thead>
-              <tr>
-                <td>Média</td>
-                <td>Paciente</td>
-                <td>Telefone</td>
-                <td>Data</td>
-                <td>Hora</td>
-                <td>Complemento</td>
-                <td>Status</td>
-              </tr>
-          </thead>
-          <tbody>
-            <?php
-              include("php/schedule.php");
-              //verifica se a variável tem os valores da tabela.
-              if (!empty($agenda_procedimento)) {
-                  //seleciona linha por linha.
-                  foreach ($agenda_procedimento as $linha) { ?>
-                    <tr>
-                        <td> <?php echo $linha['nomeMed']; ?></td>
-                        <td> <?php echo $linha['nomePac']; ?></td>
-                        <td> <?php echo $linha['telefone']; ?></td>
-                        <td> <?php echo $linha['dia']; ?></td>
-                        <td> <?php echo $linha['hora']; ?></td>
-                        <td> <?php echo $linha['complemento']; ?></td>
-                        <td> <?php echo $linha['status']; ?></td>
-                    </tr>
-              <?php }
-              } 
-            ?>
-          </tbody>
-        </table>
-
         <h3 class="h3">Consultas</h3>
         <table class="table table-bordered table-condensed table-hover">
           <thead>
               <tr>
-                <td>Média</td>
-                <td>Paciente</td>
-                <td>Telefone</td>
-                <td>Data</td>
-                <td>Hora</td>
-                <td>Complemento</td>
-                <td>Status</td>
+                <td class="col-md-2">Média</td>
+                <td class="col-md-2">Paciente</td>
+                <td class="col-md-1">Telefone</td>
+                <td class="col-md-1">Data</td>
+                <td class="col-md-1">Hora</td>
+                <td class="col-md-4">Complemento</td>
+                <td class="col-md-1">Status</td>
               </tr>
             
           </thead>
@@ -83,15 +49,54 @@
               //verifica se a variável tem os valores da tabela.
               if (!empty($agenda_consulta)) {
                   //seleciona linha por linha.
-                  foreach ($agenda_consulta as $linha) { ?>
+                  foreach ($agenda_consulta as $linha) { 
+                    $dia = str_replace('-"', '/', $linha['dia']); $diaFormatado = date("d/m/y", strtotime($dia));
+                    ?>
                     <tr>
-                        <td> <?php echo $linha['nomeMed']; ?></td>
-                        <td> <?php echo $linha['nomePac']; ?></td>
-                        <td> <?php echo $linha['telefone']; ?></td>
-                        <td> <?php echo $linha['dia']; ?></td>
-                        <td> <?php echo $linha['hora']; ?></td>
-                        <td> <?php echo $linha['complemento']; ?></td>
-                        <td> <?php echo $linha['status']; ?></td>
+                        <td class="col-md-2"> <?php echo $linha['nomeMed']; ?></td>
+                        <td class="col-md-2"> <?php echo $linha['nomePac']; ?></td>
+                        <td class="col-md-1"> <?php echo $linha['telefone']; ?></td>
+                        <td class="col-md-1"> <?php echo $diaFormatado; ?></td> <!-- Formatação para d/m/Y -->
+                        <td class="col-md-1"> <?php echo substr($linha['hora'], 0, -3)?></td>
+                        <td class="col-md-4"> <?php echo $linha['complemento']; ?></td>
+                        <td class="col-md-1"> <?php echo $linha['status']; ?></td>
+                    </tr>
+              <?php }
+              } 
+            ?>
+          </tbody>
+        </table>
+        <h3 class="h3">Procedimentos</h3>
+        <table class="table table-bordered table-condensed table-hover">
+          <thead>
+              <tr>
+                <td class="col-md-2">Média</td>
+                <td class="col-md-2">Paciente</td>
+                <td class="col-md-1">Telefone</td>
+                <td class="col-md-1">Data</td>
+                <td class="col-md-1">Hora</td>
+                <td class="col-md-4">Complemento</td>
+                <td class="col-md-1">Status</td>
+              </tr>
+          </thead>
+          <tbody>
+            <?php
+              include("php/schedule.php");
+              //verifica se a variável tem os valores da tabela.
+              if (!empty($agenda_procedimento)) {
+                  //seleciona linha por linha.
+                  foreach ($agenda_procedimento as $linha) { 
+                    $dia = str_replace('-"', '/', $linha['dia']); $diaFormatado = date("d/m/y", strtotime($dia));
+                    ?>
+                  
+                    <tr>
+                        <td class="col-md-2"> <?php echo $linha['nomeMed']; ?></td>
+                        <td class="col-md-2"> <?php echo $linha['nomePac']; ?></td>
+                        <td class="col-md-1"> <?php echo $linha['telefone']; ?></td>
+                        <td class="col-md-1"> <?php echo $diaFormatado; ?></td> <!-- Formatação para d/m/Y -->
+                        <td class="col-md-1"> <?php echo substr($linha['hora'], 0, -3)?></td>
+                        <td class="col-md-4"> <?php echo $linha['complemento']; ?></td>
+                        <td class="col-md-1"> <?php echo $linha['status']; ?></td>
                     </tr>
               <?php }
               } 
@@ -178,7 +183,7 @@
 
 </div>
 <script src="assets/script.js"></script>
-  <script>
+<script>
     const navBar = document.querySelector("nav"),
       menuBtns = document.querySelectorAll(".menu-icon");
 
@@ -187,11 +192,7 @@
         navBar.classList.toggle("closed");
       });
     });
-
-    overlay.addEventListener("click", () => {
-      navBar.classList.remove("closed");
-    });
-  </script>
+</script>
 
   
 </body>
