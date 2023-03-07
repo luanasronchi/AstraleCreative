@@ -36,13 +36,13 @@
     <div class="panel mt-5">
         <div class="margin-top">
           
-            <nav class="navbar justify-content-between">
+            <section class="navbar justify-content-between p-0">
                 <h1 class="h1">Pacientes</h1> 
                 <form action="php/cpf_search.php" method="POST" class="d-flex flex-row">
                   <input name="cpf" class="form-control btn-outline me-1 input_all" type="search" placeholder="CPF" aria-label="Search">
                   <input type="submit" class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Buscar">
                 </form>
-              </nav>
+            </section>
           <div>
                 <div class="row">
                   <div class="col-md-3 p-4">
@@ -84,11 +84,10 @@
                   <div class="col-md-6 my-auto">
                       <h3>Observação</h3>
                       <textarea class="form-control input_all" name="obs" id="obs" rows="10"></textarea>
-                    
                   </div>
                 </div>
                   <div class="col">
-                      <div class="row">
+                      <div class="row-m">
                           <h3>Histórico</h3>
                           <textarea class="form-control input_all" rows="10"></textarea>
                       </div>
@@ -166,7 +165,7 @@
 
 </div>
 <script src="assets/script.js"></script>
-  <script>
+<script>
     const navBar = document.querySelector("nav"),
       menuBtns = document.querySelectorAll(".menu-icon");
 
@@ -175,7 +174,7 @@
         navBar.classList.toggle("closed");
       });
     });
-  </script>
+</script>
 
   
 </body>
